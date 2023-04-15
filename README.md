@@ -1,38 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# tax-ify
 
-## Getting Started
+![Build and deploy](https://github.com/jaantaponen/tax-ify/actions/workflows/build-deploy.yml/badge.svg)
 
-First, run the development server:
+This project initiated from the need to inform the Finnish Tax Administration (Verottaja) with transactions (wheter security or crypto) with FIFO based calculations. The aim of the project is to provide fast and easy calculation of your taxable capital gains (or losses).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [https://jaantaponen.github.io/tax-ify/](https://jaantaponen.github.io/tax-ify/) to test it out!
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Example files
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+* [Coinbase](https://github.com/jaantaponen/tax-ify/blob/main/tests/files/SortIssuedCoinbase.csv)
+* [CoinbasePro](https://github.com/jaantaponen/tax-ify/blob/main/tests/files/SortIssuedCoinbasePro.csv)
+* [Degiro](https://github.com/jaantaponen/tax-ify/blob/main/tests/files/transactionsDegiro.csv)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Need more examples?
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can see if one of the test files suits your needs [here](https://github.com/jaantaponen/tax-ify/tree/main/tests/files)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Development instructions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run the development server with 
+```console
+npm start
+``` 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run the unit tests with Jest use
+```console
+npm run tests
+``` 
 
-## Deploy on Vercel
+## FAQ
+**Q:** How does tax-ify calculate the results?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**A:** The method tax-ify calculates and the groups the results of your transactions is a very common format called First in, First Out [(FIFO)](https://www.investopedia.com/terms/f/fifo.asp). This means if you give the algorithm a valid source of data it will produce a list with your sell orders divided as many buy transaction of what you have. From this data it's very easy to just sum your capital losses/gains. You can view an examples of the algorithm from the test [transactions](./tests/transactions.test.ts).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##
+**Q:** What values do I need to report to the Tax Adminstartion (Verottaja)?
+
+**A:** After inserting valid infromation, you can see the Capital Gain, Capital Loss and total transaction per capital type at the bottom of the page.
+The same fields can be found from Omavero. Use the instructions provided on the official [site](https://www.vero.fi/henkiloasiakkaat/omaisuus/sijoitukset/virtuaalivaluutat/) to fill out official tax form.
+##
+
+**Q:** Help my CSV is parsed incorrectly!
+
+**A:** Currently only Coinbase, Coinbase Pro, Nordnet and Degiro are supported as source of CSV files. If you have more complex transactions than there are tests for, please open an [issue](https://github.com/jaantaponen/tax-ify/issues/new)! Don't forget to provide the problematic CSV file.
+##
+
+**Q:** I want to help out, what can I do?
+
+**A:** I would be so happy if you could help out! Writing more unit tests, improve the UI/UX. Fork the project and submit a PR!

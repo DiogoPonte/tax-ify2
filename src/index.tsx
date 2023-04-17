@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Frontpage } from './components/Frontpage'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import { PreviewData } from './components/PreviewData'
+
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter basename={process.env.REACT_APP_URI}>
     <Routes>
       <Route path="/" element={<Frontpage />} />
       <Route path="securities" element={<PreviewData mode="SECURITY" />} />
       <Route path="crypto" element={<PreviewData mode="CRYPTO" />} />
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById('root')
 );

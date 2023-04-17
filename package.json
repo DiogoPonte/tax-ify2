@@ -1,8 +1,8 @@
 {
   "name": "verohommeli",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://diogoponte.github.io/tax-ify/",
+  "private": false,
+  "homepage": "https://diogoponte.github.io/tax-ify2",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
@@ -17,6 +17,7 @@
     "@types/react-dom": "^17.0.11",
     "axios": "^0.26.1",
     "csv": "^6.0.5",
+    "gh-pages": "^5.0.0",
     "lodash": "4.17.21",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.34",
@@ -30,8 +31,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "CI=false && react-scripts build && cp ./build/index.html ./build/404.html && cp ./public/google25a7a381a85234f3.html ./build/",
+    "build": "react-scripts build",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand --silent",
     "test:debug": "cross-env NODE_ENV=test jest --verbose --runInBand",
     "test:watch": "npm run test:debug -- --watch --runInBand",

@@ -121,7 +121,7 @@ const PreviewData = ({ mode }: Props) => {
 
         } catch (e: any) {
             setErrorFifo(e.message)
-        }
+        }  
     }
 
     const currencyClick = () => {

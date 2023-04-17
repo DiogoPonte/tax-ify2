@@ -101,7 +101,7 @@ const columnsSecurity: GridColumns = [
         },
     },
     {
-        field: 'custos', headerName: 'custos', type: 'number', editable: true, minWidth: 110,
+        field: 'custos', headerName: 'Custos', type: 'number', editable: true, minWidth: 110,
         ...currencyFormat,
         preProcessEditCellProps: (params) => {
             const isValid = validateCurrency(params.props.value);
@@ -149,7 +149,7 @@ const columnsCrypto: GridColumns = [
         },
     },
     {
-        field: 'custos', headerName: 'custos', type: 'number', editable: true, minWidth: 110,
+        field: 'custos', headerName: 'Custos', type: 'number', editable: true, minWidth: 110,
         ...currencyFormat,
         preProcessEditCellProps: (params) => {
             const isValid = validateCurrency(params.props.value);

@@ -2,7 +2,7 @@
   "name": "verohommeli",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://diogoponte.github.io/tax-ify2",
+  "homepage": "https://diogoponte.github.io/",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",

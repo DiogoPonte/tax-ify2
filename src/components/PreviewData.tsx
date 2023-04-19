@@ -279,7 +279,7 @@ const PreviewData = ({ mode }: Props) => {
 
                     </Typography>
                     {errorFifo && <Alert severity="error">{errorFifo}</Alert>}
-                    {showCurrencyFetchButton &&
+                    {/*showCurrencyFetchButton &&
                         <Stack direction="row" alignItems="flex-end" justifyContent="center" spacing={2} sx={{ pb: 1 }}>
                             <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>
                                 <Alert severity="warning" >
@@ -292,7 +292,7 @@ const PreviewData = ({ mode }: Props) => {
                             <div style={{ paddingBottom: "4px" }}>
                                 <Button variant="contained" sx={{ minWidth: "140px", minHeight: "42px" }} onClick={currencyClick} endIcon={<DownloadIcon />} >I accept</Button>
                             </div>
-                        </Stack>}
+                    </Stack>*/}
 
                     {showTable && !showCurrencyFetchButton && <Stack direction="row" spacing={2}>
                         <Button variant="outlined" onClick={clearRows} startIcon={<DeleteIcon />}>

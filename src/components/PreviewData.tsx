@@ -100,7 +100,7 @@ const PreviewData = ({ mode }: Props) => {
                 buydate: new Date(x.buydate),
                 selldate: new Date(x.selldate),
                 transferFee: `${Number(x.transferFee)} EUR`,
-                profitOrLoss: `${Number(x.profitOrLoss - (Math.abs(x.acquisitionFee) + Math.abs(x.transferFee)))} EUR`,
+                profitOrLoss: `${Number(x.profitOrLoss)} EUR`,
                 id: idx
             })))
 
@@ -278,7 +278,7 @@ const PreviewData = ({ mode }: Props) => {
                     <Typography sx={{ pb: 0, pl: 4, mt: 0 }} alignSelf="flex-start" component="p">
 
                     </Typography>
-                    {errorFifo && <Alert severity="error">{errorFifo}</Alert>}
+                    {/*errorFifo && <Alert severity="error">{errorFifo}</Alert>*/}
                     {/*showCurrencyFetchButton &&
                         <Stack direction="row" alignItems="flex-end" justifyContent="center" spacing={2} sx={{ pb: 1 }}>
                             <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>

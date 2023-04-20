@@ -94,7 +94,7 @@ const getDegiroAsColumns = (records: DegiroHeaders[]): ColumnDataSecurity[] => {
             valor: `${record.value} ${record.valueCurrency}`,
             quantidade: record.quantity,
             custos: `${record.transactionCosts} ${record.transactionCostsCurrency}`,
-            preço: `${record.rate} ${record.rateCurrency}`,
+            preço: `${record.value / record.quantity} ${record.rateCurrency}`,
             total: `${record.totalAmount} ${record.totalAmountCurrency}`,
             operation: record.quantity > 0 ? "BUY" : "SELL",
         } as ColumnDataSecurity

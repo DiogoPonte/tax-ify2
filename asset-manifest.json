@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "https://diogoponte.github.io/tax-ify2/static/css/main.6e4eaa7d.chunk.css",
-    "main.js": "https://diogoponte.github.io/tax-ify2/static/js/main.19d67ab9.chunk.js",
-    "main.js.map": "https://diogoponte.github.io/tax-ify2/static/js/main.19d67ab9.chunk.js.map",
-    "runtime-main.js": "https://diogoponte.github.io/tax-ify2/static/js/runtime-main.9b0ecf37.js",
-    "runtime-main.js.map": "https://diogoponte.github.io/tax-ify2/static/js/runtime-main.9b0ecf37.js.map",
-    "static/js/2.c27832dd.chunk.js": "https://diogoponte.github.io/tax-ify2/static/js/2.c27832dd.chunk.js",
-    "static/js/2.c27832dd.chunk.js.map": "https://diogoponte.github.io/tax-ify2/static/js/2.c27832dd.chunk.js.map",
-    "static/js/3.980aa5e4.chunk.js": "https://diogoponte.github.io/tax-ify2/static/js/3.980aa5e4.chunk.js",
-    "static/js/3.980aa5e4.chunk.js.map": "https://diogoponte.github.io/tax-ify2/static/js/3.980aa5e4.chunk.js.map",
-    "static/js/4.ad2c960f.chunk.js": "https://diogoponte.github.io/tax-ify2/static/js/4.ad2c960f.chunk.js",
-    "static/js/4.ad2c960f.chunk.js.map": "https://diogoponte.github.io/tax-ify2/static/js/4.ad2c960f.chunk.js.map",
+    "main.js": "https://diogoponte.github.io/tax-ify2/static/js/main.130fe9df.chunk.js",
+    "main.js.map": "https://diogoponte.github.io/tax-ify2/static/js/main.130fe9df.chunk.js.map",
+    "runtime-main.js": "https://diogoponte.github.io/tax-ify2/static/js/runtime-main.a8ab94d2.js",
+    "runtime-main.js.map": "https://diogoponte.github.io/tax-ify2/static/js/runtime-main.a8ab94d2.js.map",
+    "static/js/2.b9aa6c81.chunk.js": "https://diogoponte.github.io/tax-ify2/static/js/2.b9aa6c81.chunk.js",
+    "static/js/2.b9aa6c81.chunk.js.map": "https://diogoponte.github.io/tax-ify2/static/js/2.b9aa6c81.chunk.js.map",
+    "static/js/3.1d274917.chunk.js": "https://diogoponte.github.io/tax-ify2/static/js/3.1d274917.chunk.js",
+    "static/js/3.1d274917.chunk.js.map": "https://diogoponte.github.io/tax-ify2/static/js/3.1d274917.chunk.js.map",
+    "static/js/4.5335d7f3.chunk.js": "https://diogoponte.github.io/tax-ify2/static/js/4.5335d7f3.chunk.js",
+    "static/js/4.5335d7f3.chunk.js.map": "https://diogoponte.github.io/tax-ify2/static/js/4.5335d7f3.chunk.js.map",
     "index.html": "https://diogoponte.github.io/tax-ify2/index.html",
     "static/css/main.6e4eaa7d.chunk.css.map": "https://diogoponte.github.io/tax-ify2/static/css/main.6e4eaa7d.chunk.css.map",
-    "static/js/2.c27832dd.chunk.js.LICENSE.txt": "https://diogoponte.github.io/tax-ify2/static/js/2.c27832dd.chunk.js.LICENSE.txt",
+    "static/js/2.b9aa6c81.chunk.js.LICENSE.txt": "https://diogoponte.github.io/tax-ify2/static/js/2.b9aa6c81.chunk.js.LICENSE.txt",
     "static/media/sync.cjs": "https://diogoponte.github.io/tax-ify2/static/media/sync.f24cae06.cjs"
   },
   "entrypoints": [
-    "static/js/runtime-main.9b0ecf37.js",
-    "static/js/2.c27832dd.chunk.js",
+    "static/js/runtime-main.a8ab94d2.js",
+    "static/js/2.b9aa6c81.chunk.js",
     "static/css/main.6e4eaa7d.chunk.css",
-    "static/js/main.19d67ab9.chunk.js"
+    "static/js/main.130fe9df.chunk.js"
   ]
 }

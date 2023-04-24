@@ -100,7 +100,7 @@ const PreviewData = ({ mode }: Props) => {
                 buydate: new Date(x.buydate),
                 selldate: new Date(x.selldate),
                 transferFee: `${Number(x.transferFee)} EUR`,
-                profitOrLoss: `${Number(x.profitOrLoss)} EUR`,
+                profitOrLoss: `${Number(x.profitOrLoss) - 0} EUR`,
                 id: idx
             })))
 
@@ -118,13 +118,13 @@ const PreviewData = ({ mode }: Props) => {
                     sellprices: _.sumBy(finalFifo, (o) => ((o.amountsold * o.transferPrice) - Math.abs(o.transferFee)))
                 }
             })
-
-        } catch (e: any) {
+        }
+        catch (e: any){
             setErrorFifo(e.message)
-        }  
+        }
     }
 
-    const currencyClick = () => {
+    /*const currencyClick = () => {
         (async () => {
             const additionlOperationTobeAdded = [] as any[]
             const arrReplacedObj = await Promise.all(rawDataAsColumns.map(async item => {
@@ -146,7 +146,7 @@ const PreviewData = ({ mode }: Props) => {
                     /**
                      * Need to handle Coinbase Pro incorrect currencies as SELL, BUY instead of just sell
                      * SInce most of the entries are just from converting Currency x via uniswap (for example UNI to BTC )
-                     */
+                     *//*
                     if (originalData['CoinbasePro']?.find(y => y.id === item.id)) {
                         additionlOperationTobeAdded.push({
                             ...item,
@@ -167,7 +167,7 @@ const PreviewData = ({ mode }: Props) => {
             setShowCurrencyFetchButton(false)
             setParseError("")
         })()
-    }
+    }*/
 
 
     useEffect(() => {
@@ -278,8 +278,8 @@ const PreviewData = ({ mode }: Props) => {
                     <Typography sx={{ pb: 0, pl: 4, mt: 0 }} alignSelf="flex-start" component="p">
 
                     </Typography>
-                    {/*errorFifo && <Alert severity="error">{errorFifo}</Alert>*/}
-                    {/*showCurrencyFetchButton &&
+                    {/*{errorFifo && <Alert severity="error">{errorFifo}</Alert>}
+                    {showCurrencyFetchButton &&
                         <Stack direction="row" alignItems="flex-end" justifyContent="center" spacing={2} sx={{ pb: 1 }}>
                             <Stack direction="column" alignItems="center" justifyContent="center" spacing={2}>
                                 <Alert severity="warning" >
@@ -292,9 +292,9 @@ const PreviewData = ({ mode }: Props) => {
                             <div style={{ paddingBottom: "4px" }}>
                                 <Button variant="contained" sx={{ minWidth: "140px", minHeight: "42px" }} onClick={currencyClick} endIcon={<DownloadIcon />} >I accept</Button>
                             </div>
-                    </Stack>*/}
+                    </Stack>}*/}
 
-                    {showTable && !showCurrencyFetchButton && <Stack direction="row" spacing={2}>
+                    {showTable /*&& !showCurrencyFetchButton*/ && <Stack direction="row" spacing={2}>
                         <Button variant="outlined" onClick={clearRows} startIcon={<DeleteIcon />}>
                             Apagar
                         </Button>

@@ -210,12 +210,12 @@ const calculateCapitalGainsForSale = (
   );
   // TODO: removee nii perkeleesti ja implementoi uudestaan paremmin
   //if (Number(sale.amount ?  sale.amount.toFixed(6) : 0) > 0) {
-  if (Math.round(sale.amount) > 0) {
+  /*if (Math.round(sale.amount) > 0) {
     throw Error(
       `Amount of sales for ticker ${sale.symbol} exceeds the amount of buys by ${sale.amount}. In transaction made in ${new Date(sale.date)
         .toLocaleString('en-GB', { timeZone: 'UTC' })}`
     );
-  }
+  }*/
 
   return {
     capitalGainPerSellDate,
